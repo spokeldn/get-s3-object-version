@@ -21,4 +21,4 @@ outputs:
     description: 'The latest version of the the requested object'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
