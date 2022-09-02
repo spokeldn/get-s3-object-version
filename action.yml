@@ -1,15 +1,6 @@
 name: 'Get latest S3 Object Version'
 description: 'Gets the latest version of a supplied object from S3'
 inputs:
-  region:
-    description: 'The AWS region'
-    required: true
-  aws_access_key:
-    description: 'The AWS access key'
-    required: true
-  aws_secret_key:
-    description: 'The AWS secret key'
-    required: true
   bucket:
     description: 'The bucket to interrogate'
     required: true
