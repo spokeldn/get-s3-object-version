@@ -27123,6 +27123,8 @@ const s3 = new S3({
 
 async function run() {
   console.log('beginning action');
+  console.log(core.getInput('aws_access_key'));
+  console.log(core.getInput('aws_secret_key'));
   try {
     console.log('setup client');
 
