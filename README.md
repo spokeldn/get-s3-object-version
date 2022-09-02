@@ -10,6 +10,14 @@ Requires an AWS role to be assumed before performing this action.
 
 **Required** The AWS region of the bucket (this can be any region, as S3 is Global)
 
+### `aws_access_key`
+
+**Required** The AWS access key
+
+### `aws_secret_key`
+
+**Required** The AWS secret access key
+
 ### `bucket`
 
 **Required** The name of the bucket the object lives in

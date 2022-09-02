@@ -4,7 +4,13 @@ const { S3Client, HeadObjectCommand } = require('@aws-sdk/client-s3');
 
 async function run() {
   try {
-    const client = new S3Client({ region: core.getInput('region') });
+    const client = new S3Client({
+      region: core.getInput('region'),
+      credentials: {
+        accessKeyId: core.getInput('aws_access_key'),
+        secretAccessKey: core.getInput('aws_secret_key')
+      }
+    });
 
     const params = {
       Bucket: core.getInput('bucket'),
