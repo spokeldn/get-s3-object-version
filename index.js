@@ -1,11 +1,8 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
+// const github = require('@actions/github');
 const { S3Client, HeadObjectCommand } = require('@aws-sdk/client-s3');
 
 async function run() {
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
-
   const client = new S3Client({});
 
   try {
