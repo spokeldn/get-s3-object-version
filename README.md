@@ -6,6 +6,10 @@ Requires an AWS role to be assumed before performing this action.
 
 ## Inputs
 
+### `region`
+
+**Required** The AWS region of the bucket (this can be any region, as S3 is Global)
+
 ### `bucket`
 
 **Required** The name of the bucket the object lives in
@@ -25,6 +29,7 @@ The latest version ID of the object requested
 ```
 uses: spokeldn/get-s3-object-version@v1
 with:
+  region: us-east-1
   bucket: my-bucket-name
   object_key: my-object
 ```

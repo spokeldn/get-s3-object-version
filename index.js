@@ -3,9 +3,9 @@ const core = require('@actions/core');
 const { S3Client, HeadObjectCommand } = require('@aws-sdk/client-s3');
 
 async function run() {
-  const client = new S3Client({});
-
   try {
+    const client = new S3Client({ region: core.getInput('region') });
+
     const params = {
       Bucket: core.getInput('bucket'),
       Key: core.getInput('object_key')
