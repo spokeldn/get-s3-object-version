@@ -1,16 +1,11 @@
 const core = require('@actions/core');
 const S3 = require('aws-sdk/clients/s3');
 
-const s3 = new S3({
-  region: core.getInput('region'),
-  accessKeyId: core.getInput('aws_access_key'),
-  secretAccessKey: core.getInput('aws_secret_key')
-});
+const s3 = new S3();
 
 async function run() {
   console.log('beginning action');
-  console.log(core.getInput('aws_access_key'));
-  console.log(core.getInput('aws_secret_key'));
+
   try {
     console.log('setup client');
 

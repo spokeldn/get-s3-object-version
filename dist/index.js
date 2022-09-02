@@ -27115,16 +27115,11 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(2085);
 const S3 = __nccwpck_require__(1258);
 
-const s3 = new S3({
-  region: core.getInput('region'),
-  accessKeyId: core.getInput('aws_access_key'),
-  secretAccessKey: core.getInput('aws_secret_key')
-});
+const s3 = new S3();
 
 async function run() {
   console.log('beginning action');
-  console.log(core.getInput('aws_access_key'));
-  console.log(core.getInput('aws_secret_key'));
+
   try {
     console.log('setup client');
 
