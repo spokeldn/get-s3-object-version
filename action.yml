@@ -1,0 +1,15 @@
+name: 'Get latest S3 Object Version'
+description: 'Gets the latest version of a supplied object from S3'
+inputs:
+  bucket:
+    description: 'The bucket to interrogate'
+    required: true
+  object_key:  # id of input
+    description: 'The object key in S3'
+    required: true
+outputs:
+  version_id: # id of output
+    description: 'The latest version of the the requested object'
+runs:
+  using: 'node16'
+  main: 'index.js'
